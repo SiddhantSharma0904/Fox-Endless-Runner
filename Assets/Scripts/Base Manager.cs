@@ -4,9 +4,17 @@ using UnityEngine;
 public class BaseManager : MonoBehaviour
 {
     public Transform nextBasePosition;
+    [SerializeField] BaseGeneration baseGeneration;
+
     public List<Transform> rotatingObstacle;
     float rotating_speed = 2f;
     public bool IsPooled;
+
+    private void OnEnable()
+    {
+        baseGeneration.gameObject.SetActive(true);
+    }
+
 
     private void Update()
     {
