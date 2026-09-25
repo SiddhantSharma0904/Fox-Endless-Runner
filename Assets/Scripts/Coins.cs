@@ -6,7 +6,7 @@ public class Coins : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        other.tag = "Player";
+        if(other.tag == "Player")
         //Debug.Log("Coin Added");
         gameObject.SetActive(false);
             
